@@ -71,31 +71,92 @@ function validateForm(form) {
   return valid;
 }
 
-function attachFormBehavior(formId, noticeId, successMessage) {
-  const form = document.getElementById(formId);
-  const notice = document.getElementById(noticeId);
+const API_BASE_URL = window.API_BASE_URL || '';
+
+async function submitForm({
+  form,
+  notice,
+  endpoint,
+  body,
+  successMessage
+}) {
+  notice.className = 'notice';
+  notice.textContent = '';
+
+  if (!validateForm(form)) return;
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn?.classList.add('loading');
+  if (submitBtn) submitBtn.disabled = true;
+
+  try {
+    const res = await fetch(`${API_BASE_URL}${endpoint}`, body);
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.ok) {
+      throw new Error(data.error || 'Request failed.');
+    }
+
+    form.reset();
+    notice.className = 'notice success';
+    notice.textContent = successMessage;
+  } catch (err) {
+    notice.className = 'notice error';
+    notice.textContent = err?.message || 'Something went wrong. Please try again.';
+  } finally {
+    submitBtn?.classList.remove('loading');
+    if (submitBtn) submitBtn.disabled = false;
+  }
+}
+
+function attachContactForm() {
+  const form = document.getElementById('contactForm');
+  const notice = document.getElementById('contactNotice');
   if (!form || !notice) return;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    notice.className = 'notice';
-    notice.textContent = '';
+    const payload = {
+      name: form.querySelector('#contactName')?.value || '',
+      email: form.querySelector('#contactEmail')?.value || '',
+      subject: form.querySelector('#contactSubject')?.value || '',
+      message: form.querySelector('#contactMessage')?.value || ''
+    };
 
-    if (!validateForm(form)) return;
-
-    const submitBtn = form.querySelector('button[type="submit"]');
-    submitBtn.classList.add('loading');
-    submitBtn.disabled = true;
-
-    setTimeout(() => {
-      submitBtn.classList.remove('loading');
-      submitBtn.disabled = false;
-      form.reset();
-      notice.className = 'notice success';
-      notice.textContent = successMessage;
-    }, 1200);
+    submitForm({
+      form,
+      notice,
+      endpoint: '/api/contact',
+      body: {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      },
+      successMessage: 'Your message has been sent successfully. We will get back to you shortly.'
+    });
   });
 }
 
-attachFormBehavior('uploadForm', 'uploadNotice', 'Demo upload submitted successfully. In a real production setup, this would be connected to your backend or CRM.');
-attachFormBehavior('contactForm', 'contactNotice', 'Your message has been sent successfully. We will get back to you shortly.');
+function attachUploadForm() {
+  const form = document.getElementById('uploadForm');
+  const notice = document.getElementById('uploadNotice');
+  if (!form || !notice) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    submitForm({
+      form,
+      notice,
+      endpoint: '/api/order',
+      body: {
+        method: 'POST',
+        body: formData
+      },
+      successMessage: 'Your order has been sent successfully. We will contact you shortly.'
+    });
+  });
+}
+
+attachUploadForm();
+attachContactForm();
