@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works | VoltDrive Tuning</title>
+  <meta name="description" content="Learn how the ECU file service workflow works: upload original file, receive expert modifications and download your tuned file." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html"><span class="brand-mark"><span></span></span><span>VoltDrive Tuning</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a class="active" href="how-it-works.html">How It Works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="upload.html">File Upload</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero container">
+    <span class="eyebrow">Workflow</span>
+    <h1>Three simple steps from stock file to tuned delivery</h1>
+    <p>A streamlined process built for busy workshops and tuning resellers. Fast, transparent and easy to use.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a> / How It Works</div>
+  </section>
+
+  <section class="section section-sm">
+    <div class="container grid three-col steps">
+      <article class="card step-card" data-reveal>
+        <div class="step-number">1</div>
+        <div class="icon-box" style="margin-inline:auto;"><i class="fa-solid fa-file-arrow-up"></i></div>
+        <h3>Upload Original File</h3>
+        <p>Submit your stock read along with vehicle details, hardware notes and any special requests through the file order form.</p>
+      </article>
+      <article class="card step-card" data-reveal>
+        <div class="step-number">2</div>
+        <div class="icon-box" style="margin-inline:auto;"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>Engineers Prepare the Calibration</h3>
+        <p>Our calibrators analyze the ECU file, apply the requested tuning logic and verify the structure before delivery.</p>
+      </article>
+      <article class="card step-card" data-reveal>
+        <div class="step-number">3</div>
+        <div class="icon-box" style="margin-inline:auto;"><i class="fa-solid fa-download"></i></div>
+        <h3>Download Tuned File</h3>
+        <p>Receive your modified file, flash it back to the vehicle and continue with any revisions or support questions if needed.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid two-col" style="align-items:center;">
+      <div class="card" data-reveal>
+        <h3>Why workshops like this workflow</h3>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i><span>Clear request structure with vehicle and hardware details</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Fast communication for urgent customer jobs</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Practical revisions when a setup requires refinement</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Consistent delivery experience for resellers</span></li>
+        </ul>
+      </div>
+      <div data-reveal>
+        <span class="eyebrow">Practical Process</span>
+        <h2 style="font-size:clamp(2rem,5vw,3.2rem);margin:.8rem 0 1rem;font-family:'Space Grotesk',sans-serif;">Designed to keep your bay moving</h2>
+        <p class="muted">Whether you are tuning one customer car per day or running a reseller network, the process is focused on speed and clarity. No unnecessary friction. Just a clean submit-review-deliver workflow.</p>
+        <div class="btn-row" style="margin-top:20px;">
+          <a class="btn btn-primary" href="upload.html">Start an Order</a>
+          <a class="btn btn-secondary" href="contact.html">Talk to Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> VoltDrive Tuning. All rights reserved.</span>
+    <span>Tune with Confidence. Deliver with Power.</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

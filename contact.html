@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | VoltDrive Tuning</title>
+  <meta name="description" content="Contact VoltDrive Tuning for ECU remapping file requests, reseller pricing and workshop support." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html"><span class="brand-mark"><span></span></span><span>VoltDrive Tuning</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="upload.html">File Upload</a>
+      <a href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero container">
+    <span class="eyebrow">Contact</span>
+    <h1>Talk to our tuning file team</h1>
+    <p>Use the contact form for reseller pricing, technical questions or custom requests. Replace the placeholders below with your real details before going live.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a> / Contact</div>
+  </section>
+
+  <section class="section section-sm">
+    <div class="container grid two-col" style="align-items:start;">
+      <div class="card" data-reveal>
+        <h3>Contact Information</h3>
+        <ul class="feature-list">
+          <li><i class="fa-regular fa-envelope"></i><span>Email: info@voltdrivetuning.com</span></li>
+          <li><i class="fa-solid fa-phone"></i><span>Phone: +00 123 456 789</span></li>
+          <li><i class="fa-brands fa-whatsapp"></i><span>WhatsApp: +00 123 456 789</span></li>
+          <li><i class="fa-solid fa-location-dot"></i><span>Location: City / Country</span></li>
+        </ul>
+        <div class="card" style="margin-top:20px;padding:20px;background:rgba(255,255,255,.03);">
+          <strong>Map Placeholder</strong>
+          <p class="muted" style="margin-top:10px;">Embed a Google Maps iframe or custom map here in production.</p>
+        </div>
+      </div>
+
+      <form id="contactForm" class="card" novalidate data-reveal>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="contactName">Name</label>
+            <input id="contactName" type="text" data-required />
+            <span class="error-text">This field is required.</span>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" type="email" data-required />
+            <span class="error-text">Please enter a valid email.</span>
+          </div>
+          <div class="form-group full">
+            <label for="contactSubject">Subject</label>
+            <input id="contactSubject" type="text" data-required />
+            <span class="error-text">This field is required.</span>
+          </div>
+          <div class="form-group full">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" data-required></textarea>
+            <span class="error-text">This field is required.</span>
+          </div>
+        </div>
+        <div class="btn-row" style="margin-top:20px;">
+          <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        </div>
+        <div id="contactNotice" class="notice"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> VoltDrive Tuning. All rights reserved.</span>
+    <span>Replace placeholders before launch</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

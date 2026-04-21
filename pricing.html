@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | VoltDrive Tuning</title>
+  <meta name="description" content="Simple ECU file service pricing for Stage 1, Stage 2 and custom tuning. Contact us for reseller and bulk pricing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html"><span class="brand-mark"><span></span></span><span>VoltDrive Tuning</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a class="active" href="pricing.html">Pricing</a>
+      <a href="upload.html">File Upload</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero container">
+    <span class="eyebrow">Pricing</span>
+    <h1>Clear packages for professional tuners</h1>
+    <p>Use these starter prices for presentation purposes. In production, connect them to your own pricing logic or CRM.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a> / Pricing</div>
+  </section>
+
+  <section class="section section-sm">
+    <div class="container grid three-col">
+      <article class="card pricing-card" data-reveal>
+        <h3>Stage 1</h3>
+        <div class="price"><strong>€70</strong><span>/ file</span></div>
+        <p>Best for stock vehicles requiring a safe performance increase and smooth drivability.</p>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i><span>Stock hardware support</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Fast turnaround</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Basic revision support</span></li>
+        </ul>
+        <div class="btn-row" style="margin-top:20px;"><a class="btn btn-primary" href="upload.html">Order Stage 1</a></div>
+      </article>
+      <article class="card pricing-card popular" data-reveal>
+        <span class="badge">Most Popular</span>
+        <h3>Stage 2</h3>
+        <div class="price"><strong>€110</strong><span>/ file</span></div>
+        <p>Ideal for upgraded hardware setups requiring more detailed boost, torque and fueling optimization.</p>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i><span>Modified hardware support</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Refined calibration logic</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Priority communication</span></li>
+        </ul>
+        <div class="btn-row" style="margin-top:20px;"><a class="btn btn-primary" href="upload.html">Order Stage 2</a></div>
+      </article>
+      <article class="card pricing-card" data-reveal>
+        <h3>Custom</h3>
+        <div class="price"><strong>From €150</strong></div>
+        <p>For Stage 3, DSG tuning, special functions, built engines and platform-specific custom development.</p>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i><span>Custom setup review</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Advanced revision workflow</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Special requests supported</span></li>
+        </ul>
+        <div class="btn-row" style="margin-top:20px;"><a class="btn btn-primary" href="contact.html">Request Quote</a></div>
+      </article>
+    </div>
+
+    <div class="container" style="margin-top:30px;">
+      <div class="card center" data-reveal>
+        <h3 style="margin-bottom:10px;">Bulk and reseller pricing available</h3>
+        <p class="muted">Contact us for workshop packages, high-volume pricing and white-label reseller collaboration.</p>
+        <div class="btn-row" style="justify-content:center;margin-top:20px;">
+          <a class="btn btn-secondary" href="contact.html">Contact for Reseller Pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> VoltDrive Tuning. All rights reserved.</span>
+    <span>Bulk pricing on request</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File Upload | VoltDrive Tuning</title>
+  <meta name="description" content="Upload your original ECU file and vehicle details for a fast, professional tuning file request." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html"><span class="brand-mark"><span></span></span><span>VoltDrive Tuning</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="pricing.html">Pricing</a>
+      <a class="active" href="upload.html">File Upload</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero container">
+    <span class="eyebrow">Upload</span>
+    <h1>Send your original file for review</h1>
+    <p>This demo form simulates a backend workflow. It validates the inputs and shows a loading state, but it does not upload to a real server.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a> / File Upload</div>
+  </section>
+
+  <section class="section section-sm">
+    <div class="container grid two-col" style="align-items:start;">
+      <div class="card" data-reveal>
+        <h3>What to include</h3>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check"></i><span>Original stock read</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Vehicle make, model, engine and year</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Requested service: Stage 1, Stage 2, DSG, Eco or Custom</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Hardware list and any specific notes</span></li>
+        </ul>
+      </div>
+
+      <form id="uploadForm" class="card" novalidate data-reveal>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" data-required />
+            <span class="error-text">This field is required.</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" data-required />
+            <span class="error-text">Please enter a valid email.</span>
+          </div>
+          <div class="form-group">
+            <label for="make">Make</label>
+            <input id="make" name="make" type="text" data-required />
+            <span class="error-text">This field is required.</span>
+          </div>
+          <div class="form-group">
+            <label for="model">Model</label>
+            <input id="model" name="model" type="text" data-required />
+            <span class="error-text">This field is required.</span>
+          </div>
+          <div class="form-group">
+            <label for="engine">Engine</label>
+            <input id="engine" name="engine" type="text" data-required />
+            <span class="error-text">This field is required.</span>
+          </div>
+          <div class="form-group">
+            <label for="yearVehicle">Year</label>
+            <input id="yearVehicle" name="yearVehicle" type="number" min="1990" max="2030" data-required />
+            <span class="error-text">This field is required.</span>
+          </div>
+          <div class="form-group full">
+            <label for="serviceType">Requested Service</label>
+            <select id="serviceType" name="serviceType" data-required>
+              <option value="">Choose a service</option>
+              <option>Stage 1</option>
+              <option>Stage 2</option>
+              <option>Stage 3</option>
+              <option>Eco Tuning</option>
+              <option>DSG / TCU Tuning</option>
+              <option>Custom Tuning</option>
+            </select>
+            <span class="error-text">This field is required.</span>
+          </div>
+          <div class="form-group full">
+            <label for="file">Original File</label>
+            <input id="file" name="file" type="file" accept=".bin,.ori,.zip,.rar,.txt" data-required />
+            <span class="error-text">This field is required.</span>
+          </div>
+          <div class="form-group full">
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" placeholder="Hardware mods, DPF/EGR requests, preferred drivability profile, etc."></textarea>
+          </div>
+        </div>
+        <div class="btn-row" style="margin-top:20px;">
+          <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Order</button>
+        </div>
+        <div id="uploadNotice" class="notice"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> VoltDrive Tuning. All rights reserved.</span>
+    <span>Demo form only — no real upload backend connected</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
