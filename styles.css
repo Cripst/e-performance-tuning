@@ -123,6 +123,12 @@ button, input, textarea, select { font: inherit; }
   font-weight: 700;
   letter-spacing: .04em;
 }
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  display: block;
+  border-radius: 14px;
+}
 .brand-mark {
   width: 42px;
   height: 42px;

@@ -1,10 +1,22 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="28" fill="#0B1220"/>
-  <rect x="8" y="8" width="112" height="112" rx="24" stroke="url(#paint0_linear)" stroke-opacity="0.4"/>
-  <path d="M39 79L62 49H77L54 79H39Z" fill="#EF4444"/>
-  <path d="M60 79L75 49H89L74 79H60Z" fill="#38BDF8"/>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="E PERFORMANCE logo">
+  <rect width="256" height="256" rx="56" fill="#0B1220"/>
+  <rect x="16" y="16" width="224" height="224" rx="48" stroke="url(#paint0_linear)" stroke-opacity="0.5"/>
+
+  <path d="M48 96C76 78 106 68 140 66C165 64 190 68 210 76" stroke="url(#paint0_linear)" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+  <path d="M54 120C86 99 114 90 148 88C174 86 196 91 214 100" stroke="#38BDF8" stroke-width="6" stroke-linecap="round" opacity="0.22"/>
+
+  <g>
+    <rect x="64" y="96" width="18" height="76" rx="8" fill="#EF4444"/>
+    <rect x="82" y="96" width="72" height="18" rx="8" fill="url(#paint0_linear)"/>
+    <rect x="82" y="126" width="56" height="16" rx="8" fill="#E5E7EB" opacity="0.95"/>
+    <rect x="82" y="154" width="72" height="18" rx="8" fill="#38BDF8"/>
+  </g>
+
+  <text x="128" y="208" text-anchor="middle" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2.6" fill="#E5E7EB">PERFORMANCE</text>
+  <text x="46" y="208" text-anchor="start" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">E</text>
+
   <defs>
-    <linearGradient id="paint0_linear" x1="14" y1="15" x2="111" y2="114" gradientUnits="userSpaceOnUse">
+    <linearGradient id="paint0_linear" x1="34" y1="38" x2="224" y2="230" gradientUnits="userSpaceOnUse">
       <stop stop-color="#EF4444"/>
       <stop offset="1" stop-color="#38BDF8"/>
     </linearGradient>
